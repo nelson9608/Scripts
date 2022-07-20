@@ -20,7 +20,8 @@ def main(link):
 
 
 # Function to get direct url of the file
-def get_url(video_url):
+@simplebot.command
+def tiktok(video_url):
     get_video_page = requests.get(video_url, headers=HEADERS)
     video_page_content = get_video_page.content
     video_info = str(video_page_content, 'utf-8').split(
